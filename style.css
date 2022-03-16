@@ -1,0 +1,561 @@
+/*-----------------------------------------------------------------------------------
+
+	Template Name: Version College
+	Template URI: http://coderitem.com
+	Description: This is Version College web site. 
+	Author: Shahidul Islam
+	Author URI: http://shahidul44.com
+	License: GNU General Public License version 3.0
+	License URI: http://www.gnu.org/licenses/gpl-3.0.html
+	Version: 1.0
+
+-----------------------------------------------------------------------------------
+
+	1. Typography
+	2. Header Area 
+	3. Iteam Area
+	4. Footer Area
+
+-----------------------------------------------------------------------------------*/
+
+/*****************************************************/
+/**************    1. Typography   *******************/
+/*****************************************************/
+
+* {
+    margin: 0;
+    padding: 0
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Merriweather', serif;
+    font-size: 16px;
+    line-height: 18px;
+    color: #000000;
+    background: #FFFFFF;
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+}
+a:hover {
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    border: none;
+    max-width: 100%;
+}
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+button:focus {
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+input:focus {
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+.align-center {
+    align-items: center;
+}
+.justify-between {
+    justify-content: space-between;
+}
+.no-padding {
+    padding: 0;
+}
+
+.section-padding {
+    padding: 80px 0;
+}
+.section-padding-top {
+    padding: 80px 0px 50px;
+}
+.section-heading {
+    width: 80%;
+    margin: 0 auto;
+}
+.section-heading h3 {
+    font-size: 40px;
+    font-weight: 700;
+    color: #373737;
+    margin-bottom: 45px;
+    text-align: center;
+}
+.section-heading p {
+	font-size: 20px;
+	font-weight: 400;
+	line-height: 31px;
+	color: #7D7D7D;
+	margin-bottom: 70px;
+	text-align: center;
+}
+  /*****************************************************/
+ /**************    2. Header Area   ****************/
+/*****************************************************/
+.header-area {
+    overflow: hidden;
+    position: relative;
+}
+.header {
+    padding: 30px 0;
+}
+
+/*Sticky*/
+.header.sticky {
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 9999;
+	background: rgba(222,222,222,0.9);
+	transition: 0.3s;
+	padding: 10px 0;
+}
+
+.mobile-menu {
+    display: none;
+}
+.main-menu {
+    text-align: right;
+}
+.main-menu ul li {
+    display: inline-block;
+    padding-right: 20px;
+    margin-right: 20px;
+}
+.main-menu ul li:last-child {
+    padding-right: 0px;
+    margin-right: 0px;
+}
+.main-menu ul li a {
+	color: #373737;
+	font-size: 17px;
+	text-transform: capitalize;
+	position: relative;
+	padding: 15px 0;
+    overflow: hidden;
+}
+.main-menu ul li a::after {
+	content: "";
+	width: 45%;
+	height: 4px;
+	position: absolute;
+	background: #717CFF;
+	top: 83%;
+	left: -45%;
+	border-radius: 3px;
+	transition: 0.4s;
+}
+.main-menu ul li:last-child a::after {
+	content: "";
+	width: 0;
+	height: 0;
+}
+.main-menu ul li:hover a:after {
+	content: "";
+	left: 0%;
+}
+.main-menu ul li:last-child a {
+    padding: 12px 20px;
+    border: 2px solid #717CFF;
+    border-radius: 10px;
+}
+.hero-area {
+    margin-top: 50px;
+}
+.hero-content h1 {
+	font-size: 56px;
+	color: #2F2F2F;
+	width: 75%;
+	margin: 25px 0px;
+}
+.hero-content p {
+	font-size: 18px;
+	color: #7D7D7D;
+	font-weight: 400;
+	margin-bottom: 54px;
+	line-height: 26px;
+}
+.butn-link {
+	width: 206px;
+	display: flex;
+	align-items: center;
+	position: relative;
+}
+.butn-link a {
+    padding: 12px 25px;
+    color: #fff;
+    background: #717CFF;
+    border-radius: 5px;
+    width: 100%;
+}
+.arrow {
+	position: relative;
+	right: 45px;
+}
+.arrow span {
+	width: 20px;
+	height: 3px;
+	background: #fff;
+	display: block;
+}
+.arrow span:hover {
+    cursor: pointer;
+}
+.arrow .one {
+	transform: rotate(33deg);
+	width: 10px;
+	position: absolute;
+	right: 0;
+	top: -100%;
+}
+.arrow .two {
+    position: relative;
+}
+.arrow .three {
+	transform: rotate(-33deg);
+	width: 10px;
+	position: absolute;
+	right: 0;
+	top: 100%;
+}
+.hero-content .hero-social {
+	margin-top: 120px;
+}
+.hero-content .hero-social ul li {
+    display: inline-block;
+    padding: 0 10px;
+}
+.hero-content .hero-social ul li a {
+	font-size: 18px;
+	color: #3C5B9A;
+    transition: 0.4s;
+}
+.hero-content .hero-social ul li:hover a {
+    transform: scale(1.4);
+} 
+.hero-content .hero-social ul li:nth-child(2) a {
+    color: #236CD9;
+} 
+.hero-content .hero-social ul li:last-child a {
+    color: #FF5552;
+}
+.hero-right .hero-img img {
+	position: relative;
+	z-index: 2;
+}
+.hero-bg {
+	position: absolute;
+	bottom: -30%;
+	width: 207%;
+	z-index: 1;
+}
+  /*****************************************************/
+ /**************    3. Feature Area     ******************/
+/*****************************************************/
+.feature-area {
+    background: #FAFAFA;
+    padding: 60px 0;
+    overflow: hidden;
+}
+.feature h4 {
+    font-size: 23px;
+    font-weight: 400px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #373737;
+}
+.feature-content {
+    padding: 100px 0;
+}
+.feature-content .feature-single img {
+    width: 80%;
+}
+.owl-theme .owl-nav.disabled + .owl-dots {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+	background: #717CFF;
+}
+  /*****************************************************/
+ /**************    4. Service Area  ****************/
+/*****************************************************/
+.service-top {
+	margin-bottom: 30px;
+}
+.service-content {
+	padding: 24px;
+	box-shadow: 1px 1px 19px 6px #f3f3f3;
+    border: 3px solid transparent;
+	border-radius: 15px;
+}
+.service-content:hover {
+    border: 3px solid #717CFF;
+    box-sizing: border-box;
+}
+.service-content i {
+	width: 70px;
+	height: 70px;
+	background: #717CFF;
+	border-radius: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 31px;
+	color: #fff;
+	margin-bottom: 30px;
+}
+.service-content i.one {
+    background: #FF5959;
+}
+.service-content i.two {
+    background: #70CE88;
+}
+.service-content i.three {
+    background: #5C96FF;
+}
+.service-content i.four {
+    background: #FA706C;
+}
+.service-content h4 {
+	font-size: 24px;
+	color: #37474F;
+	font-weight: 500;
+	margin-bottom: 10px;
+}
+.service-content p {
+	color: #37474F;
+	line-height: 22px;
+    margin-bottom: 25px;
+}
+.butn-link.dirk a {
+    padding: 0;
+    color: #717CFF;
+    background: transparent;
+    border-radius: 0;
+}
+.dirk .arrow span {
+	background: #717CFF;
+}
+.dirk .arrow {
+	right: 73px;
+}
+  /*****************************************************/
+ /**************    5. Blog Area  ****************/
+/*****************************************************/
+.blog-area {
+    background-color: #FAFAFA;
+    overflow: hidden;
+}
+.single-blog {
+	background: #fff;
+	border-radius: 15px;
+	overflow: hidden;
+	box-shadow: 0px 0px 11px 5px #ddd;
+	height: 100%;
+}
+.single-blog img {
+	width: 100%;
+}
+.single-blog .blog-content {
+    padding: 25px;
+}
+.single-blog .date {
+	display: flex;
+    margin-bottom: 18px;
+}
+.single-blog .date i {
+    margin-right: 10px;
+    color: #565656;
+}
+.single-blog .date p {
+    color: #565656;
+}
+.single-blog h5 {
+    font-size: 22px;
+    font-weight: 500;
+    color: #252525;
+}
+.blog .butn-link {
+	margin: 0 auto;
+	padding-top: 70px;
+}
+  /*****************************************************/
+ /**************    6. Event Area  ****************/
+/*****************************************************/
+.event-carousel {
+	padding-bottom: 50px;
+}
+.event .single-event {
+	padding: 24px;
+	border: 3px solid #795e5e0f;
+	border-radius: 15px;
+}
+.single-event .date-location {
+	display: flex;
+	align-items: center;
+	margin-bottom: 25px;
+}
+.single-event .date-location .date {
+	width: 70px;
+	height: 70px;
+	background: #EBEDFF;
+	border-radius: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+    margin-right: 10px;
+}
+.single-event .date-location .date span {
+	color: #717CFF;
+	width: 30px;
+	text-align: center;
+}
+.single-event .date-location .location h4 {
+	font-size: 24px;
+    font-weight: 500;
+    color: #37474F;
+	line-height: 30px;
+}
+.single-event p {
+	color: #37474F;
+	line-height: 26px;
+	margin-bottom: 30px;
+}
+.single-event .link-time {
+	display: flex;
+	justify-content: space-between;
+}
+.single-event .link-time .butn-link {
+	width: 185px;
+	display: flex;
+	align-items: center;
+	position: relative;
+}
+.single-event .link-time .time {
+    color: #373737;
+}
+.event-carousel .owl-theme .owl-nav.disabled + .owl-dots {
+	bottom: -20%;
+}
+  /*****************************************************/
+ /**************    7. Country Area  ****************/
+/*****************************************************/
+.country-area {
+    background: #FAFAFA;
+    overflow: hidden;
+}
+.country-carousel {
+    padding-bottom: 50px;
+}
+.single-country img {
+    border-radius: 15px;
+    margin-bottom: 30px;
+}
+.single-country h4 {
+    font-size: 25px;
+    font-weight: 500;
+    color: #37474F;
+    margin-bottom: 10px;
+}
+.single-country p {
+    color: #37474F;
+    line-height: 27px;
+    padding-bottom: 20px;
+}
+.country-area .country-carousel .owl-theme .owl-nav.disabled + .owl-dots {
+	bottom: -10%;
+}
+  /*****************************************************/
+ /**************    8. Aply Area  ****************/
+/*****************************************************/
+.apply-area h4 {
+    font-size: 40px;
+    font-weight: 700;
+    color: #252525;
+}
+  /*****************************************************/
+ /**************    9. Aply Area  ****************/
+/*****************************************************/
+.footer-area {
+	background-color: #717CFF;
+	overflow: hidden;
+	padding: 50px;
+}
+.footer-top {
+    margin-bottom: ;
+}
+.footer-one {}
+.footer-one .footer-logo img {
+	filter: brightness(100);
+	margin-bottom: 15px;
+}
+.footer-one p {
+	color: #fff;
+	width: 65%;
+	line-height: 21px;
+	font-size: 15px;
+}
+.footer-two ul li {
+	padding: 9px 0;
+}
+.footer-two ul li a {
+	color: #fff;
+	font-size: 15px;
+}
+.footer-two ul li:hover a {
+    color: #ddd;
+}
+.footer-four ul {
+	display: flex;
+	position: absolute;
+	bottom: 7%;
+}
+.footer-four ul li {
+    padding-right: 15px;
+}
+.footer-four ul li a {
+	color: #fff;
+    transition: 0.2s;
+}
+.footer-four ul li:hover:first-child a {
+	color: #3C5B9A;
+    transform: scale(1.4);
+}
+.footer-four ul li:hover:nth-child(2) a {
+    color: #236CD9;
+    transform: scale(1.4);
+} 
+.footer-four ul li:hover:last-child a {
+    color: #FF5552;
+    transform: scale(1.4);
+}
+.copy-area p {
+    font-size: 15px;
+    color: #fff;
+    margin-top: 5px;
+}
